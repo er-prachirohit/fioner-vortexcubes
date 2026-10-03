@@ -39,14 +39,9 @@ export function Navbar() {
                 href={link.href} 
                 onClick={() => setIsMenuOpen(false)} 
                 aria-current={isActive ? "page" : undefined}
-                className={`relative px-2 py-2 text-[13px] uppercase tracking-wider transition-colors duration-250 ${isActive ? "text-[#FF5500] font-[600]" : "text-[#111113] font-medium hover:text-[#FF5500] group"}`}
+                className={`relative px-2 py-2 text-[13px] uppercase tracking-wider ${isActive ? "text-[#FF5500] font-[600]" : "text-[#111113] font-medium"}`}
               >
                 {link.label}
-                {isActive ? (
-                   <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-[2px] bg-[#FF5500] rounded-t-sm" />
-                ) : (
-                   <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-[2px] bg-[#FF5500] rounded-t-sm scale-x-0 group-hover:scale-x-100 transition-transform duration-250 origin-center" />
-                )}
               </Link>
             );
           })}

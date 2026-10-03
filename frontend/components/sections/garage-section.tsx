@@ -42,17 +42,17 @@ export function GarageSection() {
 
         <div className="mt-14 grid gap-5 md:grid-cols-3">
           {vehicles.map((v) => (
-            <div key={v.reg} className="relative bg-surface backdrop-blur-md rounded-card shadow-soft border border-border hover:border-orange hover:shadow-hover hover:-translate-y-1 p-6 md:p-8 transition-all">
+            <div key={v.reg} className="relative bg-white rounded-[24px] border border-[rgba(255,85,0,0.14)] border-t-[3px] border-t-[#FF5500] shadow-[0_10px_30px_rgba(255,85,0,0.10)] hover:border-[#FF5500] hover:shadow-[0_18px_44px_rgba(255,85,0,0.20)] hover:-translate-y-[4px] p-6 md:p-8 transition-all duration-300">
               <div className="relative z-10">
                 <div className="flex items-center justify-between">
-                  <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-surface backdrop-blur-md border border-orange/20 shadow-sm">
-                    <v.icon className="h-6 w-6 text-orange" />
+                  <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#FFF7F1] border border-[rgba(255,85,0,0.14)]">
+                    <v.icon className="h-6 w-6 text-[#FF5500]" />
                   </span>
                   <span
                     className={`rounded-full border px-3 py-1.5 text-[11px] font-semibold tracking-wide ${
                       v.qr === "Active"
-                        ? "border-orange-300 bg-orange-50 text-orange"
-                        : "border-border bg-surface text-secondary"
+                        ? "border-[#FF5500]/30 bg-[#FF5500]/10 text-[#FF5500]"
+                        : "border-[rgba(255,85,0,0.14)] bg-white text-[#5B5B63]"
                     }`}
                   >
                     QR {v.qr}
