@@ -17,6 +17,7 @@ export default function MarketplacePage() {
         eyebrow="Marketplace"
         title="Upgrade your vehicle with Fioner."
         description="QR safety tags, GPS trackers and bundles — delivered to you, then activated in the app."
+        titleClassName="text-[#FFEBDD]"
       />
 
       <section className="bg-background pt-16 pb-28">

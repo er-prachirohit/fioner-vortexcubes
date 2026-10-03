@@ -5,11 +5,13 @@ export function PageHeader({
   title,
   description,
   children,
+  titleClassName,
 }: {
   eyebrow?: string;
   title: string;
   description?: string;
   children?: ReactNode;
+  titleClassName?: string;
 }) {
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-black to-charcoal pt-40 pb-20 md:pt-48 md:pb-24">
@@ -28,7 +30,7 @@ export function PageHeader({
             {eyebrow}
           </span>
         )}
-        <h1 className="mt-5 font-display text-hero-mobile md:text-[3rem] md:leading-[1.08] font-semibold text-white text-balance">
+        <h1 className={`mt-5 font-display text-hero-mobile md:text-[3rem] md:leading-[1.08] font-semibold text-balance ${titleClassName || "text-white"}`}>
           {title}
         </h1>
         {description && (
