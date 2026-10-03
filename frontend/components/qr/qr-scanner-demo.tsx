@@ -17,30 +17,30 @@ export function QrScannerDemo() {
   return (
     <div className="grid gap-6 sm:grid-cols-2 items-center">
       {/* Vehicle with QR — light card */}
-      <div className="relative rounded-3xl border border-black/10 bg-white/80 p-8 shadow-sm backdrop-blur-xl">
+      <div className="relative rounded-[24px] border border-[rgba(255,85,0,0.14)] border-t-[3px] border-t-[#FF5500] bg-white p-8 shadow-[0_10px_30px_rgba(255,85,0,0.10)]">
         <div className="flex h-40 items-center justify-center">
           <div
             className={cn(
               "relative flex h-24 w-24 items-center justify-center rounded-2xl border-2 transition-colors",
-              scanned ? "border-[#ff4d00]" : "border-black/15"
+              scanned ? "border-[#FF5500]" : "border-[rgba(255,85,0,0.14)]"
             )}
           >
-            <QrCode className="h-14 w-14 text-neutral-700" strokeWidth={1.25} />
+            <QrCode className="h-14 w-14 text-[#111113]" strokeWidth={1.25} />
             {scanned && (
               <span
                 aria-hidden
-                className="absolute inset-x-0 top-0 h-0.5 bg-[#ff4d00]"
+                className="absolute inset-x-0 top-0 h-0.5 bg-[#FF5500]"
                 style={{ animation: "scan 1.8s ease-in-out infinite" }}
               />
             )}
           </div>
         </div>
-        <p className="mt-4 text-center text-sm font-medium text-neutral-600">
+        <p className="mt-4 text-center text-sm font-medium text-[#5B5B63]">
           Fioner QR tag on a vehicle
         </p>
         <button
           onClick={() => setScanned((v) => !v)}
-          className="mx-auto mt-4 flex min-h-[44px] items-center justify-center rounded-xl border border-[#ff4d00]/30 bg-[#ff4d00]/10 px-5 text-sm font-semibold text-[#ff4d00] transition-colors hover:bg-[#ff4d00]/20"
+          className="mx-auto mt-4 flex min-h-[44px] items-center justify-center rounded-xl border border-[#FF5500]/30 bg-[#FF5500]/10 px-5 text-sm font-semibold text-[#FF5500] transition-colors hover:bg-[#FF5500]/20"
         >
           {scanned ? "Reset" : "Simulate scan"}
         </button>
@@ -57,11 +57,11 @@ export function QrScannerDemo() {
       {/* Public browser card — dark gray */}
       <div
         className={cn(
-          "rounded-3xl border border-neutral-800 bg-neutral-900 p-6 shadow-2xl transition-all duration-500",
-          scanned ? "opacity-100 translate-y-0" : "opacity-75 translate-y-1"
+          "rounded-[24px] border border-[rgba(255,85,0,0.14)] bg-[#151517] p-6 shadow-[0_10px_30px_rgba(255,85,0,0.10)] transition-all duration-500",
+          scanned ? "opacity-100 translate-y-0" : "opacity-100 translate-y-1"
         )}
       >
-        <div className="flex items-center gap-2 border-b border-white/10 pb-3">
+        <div className="flex items-center gap-2 border-b border-[rgba(255,255,255,0.06)] pb-3">
           <span className="h-2.5 w-2.5 rounded-full bg-white/20" />
           <span className="h-2.5 w-2.5 rounded-full bg-white/20" />
           <span className="h-2.5 w-2.5 rounded-full bg-white/20" />

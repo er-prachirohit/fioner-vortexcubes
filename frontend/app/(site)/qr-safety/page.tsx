@@ -29,7 +29,7 @@ export default function QrSafetyPage() {
           <Button href="/marketplace/qr" size="lg">
             Get Your Fioner QR
           </Button>
-          <Button href="/how-it-works" variant="secondary" size="lg">
+          <Button href="/how-it-works" variant="outline" size="lg">
             See How It Works
           </Button>
         </div>

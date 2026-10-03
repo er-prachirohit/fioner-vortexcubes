@@ -37,7 +37,7 @@ export function SosSection() {
           </ul>
         </div>
 
-        <div className="relative overflow-hidden flex flex-col items-center gap-10 rounded-3xl border border-black/10 bg-white/80 backdrop-blur-xl p-10 shadow-lg">
+        <div className="relative overflow-hidden flex flex-col items-center gap-10 rounded-[24px] border border-[rgba(255,85,0,0.14)] border-t-[3px] border-t-[#FF5500] bg-white p-10 shadow-[0_10px_30px_rgba(255,85,0,0.10)]">
           <div
             aria-hidden
             className="pointer-events-none absolute left-1/2 top-1/2 h-[280px] w-[280px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-danger/10 blur-[100px]"

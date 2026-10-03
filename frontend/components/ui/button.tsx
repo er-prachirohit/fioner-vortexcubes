@@ -31,7 +31,7 @@ const variants: Record<string, string> = {
   secondary:
     "bg-transparent border border-[rgba(255,85,0,0.14)] text-[#111113] hover:border-[#FF5500] hover:text-[#FF5500] transition-all duration-300 hover:-translate-y-[2px] active:scale-[0.98] outline-none focus-visible:ring-[2px] focus-visible:ring-[#FF5500] focus-visible:ring-offset-3",
   outline:
-    "bg-[rgba(255,255,255,0.06)] border border-[rgba(255,255,255,0.25)] text-white hover:border-[#FF5500] hover:bg-[rgba(255,85,0,0.12)] transition-all duration-300 hover:-translate-y-[2px] active:scale-[0.98] outline-none focus-visible:ring-[2px] focus-visible:ring-[#FF5500] focus-visible:ring-offset-3",
+    "bg-transparent border border-[#FF5500] text-[#FF5500] hover:bg-[rgba(255,85,0,0.12)] transition-all duration-300 hover:-translate-y-[2px] active:scale-[0.98] outline-none focus-visible:ring-[2px] focus-visible:ring-[#FF5500] focus-visible:ring-offset-3",
   ghost: "bg-transparent border-transparent text-[#111113] hover:text-[#FF5500] transition-all duration-300 hover:-translate-y-[2px] active:scale-[0.98] outline-none focus-visible:ring-[2px] focus-visible:ring-[#FF5500] focus-visible:ring-offset-3",
   danger: "bg-danger text-white hover:bg-danger-dark shadow-[0_10px_30px_rgba(255,85,0,0.10)] transition-all duration-300 hover:-translate-y-[2px] active:scale-[0.98] outline-none focus-visible:ring-[2px] focus-visible:ring-[#FF5500] focus-visible:ring-offset-3 border-none",
 };

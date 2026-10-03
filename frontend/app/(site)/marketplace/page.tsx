@@ -19,12 +19,12 @@ export default function MarketplacePage() {
         description="QR safety tags, GPS trackers and bundles — delivered to you, then activated in the app."
       />
 
-      <section className="bg-background pb-28">
+      <section className="bg-background pt-16 pb-28">
         <div className="container-page">
           <div className="flex flex-wrap gap-2">
             <Link
               href="/marketplace"
-              className="rounded-full border border-blue/40 bg-blue/10 px-4 py-2 text-[13px] text-blue"
+              className="rounded-full border border-[#FF5500]/40 bg-[#FF5500]/10 px-4 py-2 text-[13px] text-[#FF5500] font-medium"
             >
               All products
             </Link>
@@ -33,7 +33,7 @@ export default function MarketplacePage() {
                 key={c.slug}
                 href={`/marketplace/${c.slug}`}
                 className={cn(
-                  "rounded-full border border-border px-4 py-2 text-[13px] text-secondary hover:border-blue/40 hover:text-blue"
+                  "rounded-full border border-[rgba(255,85,0,0.14)] px-4 py-2 text-[13px] text-[#5B5B63] hover:border-[#FF5500]/40 hover:text-[#FF5500]"
                 )}
               >
                 {c.label}

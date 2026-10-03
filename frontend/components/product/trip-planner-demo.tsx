@@ -10,15 +10,15 @@ const outputs = [
 
 export function TripPlannerDemo() {
   return (
-    <div className="rounded-card-lg border border-border bg-surface p-6 md:p-8">
+    <div className="rounded-[24px] border border-[rgba(255,85,0,0.14)] border-t-[3px] border-t-[#FF5500] bg-white p-6 md:p-8 shadow-[0_10px_30px_rgba(255,85,0,0.10)]">
       <div className="grid gap-4 sm:grid-cols-2">
-        <div className="rounded-card border border-border bg-surface-2 p-4">
-          <p className="text-[11px] text-tertiary">From</p>
-          <p className="mt-1 text-sm text-ink">Indore, MP</p>
+        <div className="rounded-[16px] border border-[rgba(255,85,0,0.14)] bg-[#FFF7F1] p-4">
+          <p className="text-[11px] text-[#5B5B63]">From</p>
+          <p className="mt-1 text-sm text-[#111113] font-medium">Indore, MP</p>
         </div>
-        <div className="rounded-card border border-border bg-surface-2 p-4">
-          <p className="text-[11px] text-tertiary">To</p>
-          <p className="mt-1 text-sm text-ink">Udaipur, RJ</p>
+        <div className="rounded-[16px] border border-[rgba(255,85,0,0.14)] bg-[#FFF7F1] p-4">
+          <p className="text-[11px] text-[#5B5B63]">To</p>
+          <p className="mt-1 text-sm text-[#111113] font-medium">Udaipur, RJ</p>
         </div>
       </div>
 
@@ -26,10 +26,10 @@ export function TripPlannerDemo() {
         {["Fastest", "Economical", "Lower toll"].map((pref, i) => (
           <span
             key={pref}
-            className={`rounded-full border px-3 py-1.5 text-[12px] ${
+            className={`rounded-full border px-3 py-1.5 text-[12px] font-medium ${
               i === 1
-                ? "border-blue/40 bg-blue/10 text-blue"
-                : "border-border text-tertiary"
+                ? "border-[#FF5500]/40 bg-[#FF5500]/10 text-[#FF5500]"
+                : "border-[rgba(255,85,0,0.14)] text-[#5B5B63]"
             }`}
           >
             {pref}
@@ -37,19 +37,19 @@ export function TripPlannerDemo() {
         ))}
       </div>
 
-      <div className="mt-6 h-px w-full bg-surface-2" />
+      <div className="mt-6 h-px w-full bg-[rgba(255,85,0,0.14)]" />
 
       <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3">
         {outputs.map(({ icon: Icon, label, value }) => (
-          <div key={label} className="rounded-card border border-border bg-surface-2 p-4">
-            <Icon className="h-4 w-4 text-blue" />
-            <p className="mt-2 text-[11px] text-tertiary">{label}</p>
-            <p className="mt-1 text-sm text-ink">{value}</p>
+          <div key={label} className="rounded-[16px] border border-[rgba(255,85,0,0.14)] bg-white p-4">
+            <Icon className="h-4 w-4 text-[#FF5500]" />
+            <p className="mt-2 text-[11px] text-[#5B5B63]">{label}</p>
+            <p className="mt-1 text-sm text-[#111113] font-medium">{value}</p>
           </div>
         ))}
       </div>
 
-      <p className="mt-5 text-[12px] text-disabled">
+      <p className="mt-5 text-[12px] text-[#A1A1AA]">
         Fuel and toll figures are estimates based on route and provider data, and may change with live conditions.
       </p>
     </div>

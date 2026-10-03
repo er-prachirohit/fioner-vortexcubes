@@ -37,24 +37,24 @@ export default function FeaturesPage() {
         title="Everything Fioner brings to your vehicle."
         description="One connected ecosystem — not eight separate apps. Explore each part below."
       />
-      <section className="bg-background pb-28">
+      <section className="bg-background pt-16 pb-28">
         <div className="container-page grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {features.map(({ icon: Icon, title, description, href }) => (
             <Link
               key={title}
               href={href}
-              className="group rounded-card-lg border border-border bg-surface p-6 transition-all hover:border-blue/40 hover:shadow-glow"
+              className="group rounded-[24px] border border-[rgba(255,85,0,0.14)] border-t-[3px] border-t-[#FF5500] bg-white p-6 transition-all duration-300 hover:border-[#FF5500] hover:-translate-y-1 hover:shadow-[0_18px_44px_rgba(255,85,0,0.20)]"
             >
-              <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-surface-2 border border-border">
-                <Icon className="h-5 w-5 text-blue" strokeWidth={1.75} />
+              <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#FFF7F1] border border-[rgba(255,85,0,0.14)]">
+                <Icon className="h-5 w-5 text-[#FF5500]" strokeWidth={1.75} />
               </span>
-              <h3 className="mt-5 font-display text-[16px] font-medium text-ink">
+              <h3 className="mt-5 font-display text-[16px] font-medium text-[#111113]">
                 {title}
               </h3>
-              <p className="mt-2 text-[13px] leading-relaxed text-tertiary">
+              <p className="mt-2 text-[13px] leading-relaxed text-[#5B5B63]">
                 {description}
               </p>
-              <span className="mt-4 inline-block text-[13px] text-blue group-hover:underline">
+              <span className="mt-4 inline-block text-[13px] text-[#FF5500] group-hover:underline">
                 Learn more
               </span>
             </Link>

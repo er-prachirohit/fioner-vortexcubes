@@ -180,11 +180,15 @@ select:focus-visible,
   :root {
     --bg: #0B0B0C;
     --surface-soft: #151517;
-    --surface: rgba(21,21,23,0.75);
+    --surface: #151517;
     --border: rgba(255,85,0,0.14);
     --gray-500: #A1A1AA;
     --text-main: #FFFFFF;
     --text-muted: #A1A1AA;
+    --ink: #FFFFFF;
+    --secondary: #A1A1AA;
+    --tertiary: #A1A1AA;
+    --charcoal: #151517;
   }
 }
 
