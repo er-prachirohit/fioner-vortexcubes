@@ -329,7 +329,7 @@ export function PillarStrip() {
             className="lg:col-span-7 relative group cursor-pointer"
             onClick={() => setSelectedModalPillar(activePillar)}
           >
-            <div className="relative overflow-hidden rounded-3xl border border-black/10 bg-white/80 shadow-[0_20px_50px_rgba(0,0,0,0.08)] backdrop-blur-2xl transition-all duration-500 group-hover:border-[#ff4d00]/50 group-hover:shadow-[0_10px_35px_rgba(255,77,0,0.25)]">
+            <div className="relative overflow-hidden rounded-[24px] border border-[rgba(255,85,0,0.14)] border-t-[3px] border-t-[#FF5500] bg-white shadow-[0_10px_30px_rgba(255,85,0,0.10)] transition-all duration-500 group-hover:-translate-y-[4px] group-hover:border-[#FF5500] group-hover:shadow-[0_18px_44px_rgba(255,85,0,0.20)]">
               {/* Image Aspect Ratio Container */}
               <div className="relative aspect-[16/10] w-full overflow-hidden">
                 <Image
@@ -347,18 +347,18 @@ export function PillarStrip() {
 
                 {/* Top Badges */}
                 <div className="absolute left-5 top-5 flex flex-wrap items-center gap-2 z-10">
-                  <span className="inline-flex items-center gap-1.5 rounded-full border border-white/20 bg-black/60 px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-white backdrop-blur-md">
+                  <span className="inline-flex items-center gap-1.5 rounded-full border border-white/20 bg-black/60 px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-white">
                     <span className="h-1.5 w-1.5 rounded-full bg-[#ff4d00]" />
                     {activePillar.category}
                   </span>
-                  <span className="inline-flex items-center gap-1 rounded-full border border-orange-500/30 bg-[#ff4d00]/20 px-3 py-1 text-xs font-medium text-[#ff4d00] backdrop-blur-md">
+                  <span className="inline-flex items-center gap-1 rounded-full border border-[#FF5500]/30 bg-[#FF5500]/20 px-3 py-1 text-xs font-medium text-[#ff4d00]">
                     {activePillar.badge}
                   </span>
                 </div>
 
                 {/* Expand Trigger Hover Hint */}
                 <div className="absolute right-5 top-5 z-10">
-                  <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-black/70 px-3.5 py-1.5 text-xs font-semibold text-white backdrop-blur-md transition-all duration-300 group-hover:bg-[#ff4d00] group-hover:border-[#ff4d00] group-hover:scale-105">
+                  <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-black/70 px-3.5 py-1.5 text-xs font-semibold text-white transition-all duration-300 group-hover:bg-[#ff4d00] group-hover:border-[#ff4d00] group-hover:scale-105">
                     <Maximize2 className="h-3.5 w-3.5" />
                     <span>Click for Details</span>
                   </span>
@@ -376,7 +376,7 @@ export function PillarStrip() {
                   {/* Telemetry Metrics Strip inside Image */}
                   <div className="mt-4 grid grid-cols-3 gap-2 sm:gap-4 border-t border-white/10 pt-4">
                     {activePillar.metrics.map((m, idx) => (
-                      <div key={idx} className="bg-black/50 backdrop-blur-md rounded-xl p-2.5 sm:p-3 border border-white/10">
+                      <div key={idx} className="bg-black/50 rounded-xl p-2.5 sm:p-3 border border-white/10">
                         <p className="text-[10px] sm:text-xs text-neutral-400 font-medium">{m.label}</p>
                         <p className="text-sm sm:text-lg font-bold text-white tracking-tight mt-0.5">{m.value}</p>
                       </div>
@@ -393,7 +393,7 @@ export function PillarStrip() {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.4 }}
-            className="lg:col-span-5 flex flex-col justify-between h-full bg-white/70 border border-black/10 rounded-3xl p-6 sm:p-8 backdrop-blur-xl shadow-sm"
+            className="lg:col-span-5 flex flex-col justify-between h-full bg-white border border-[rgba(255,85,0,0.14)] border-t-[3px] border-t-[#FF5500] rounded-[24px] p-6 sm:p-8 shadow-[0_10px_30px_rgba(255,85,0,0.10)]"
           >
             <div>
               <div className="flex items-center justify-between">
@@ -473,16 +473,15 @@ export function PillarStrip() {
               return (
                 <motion.div
                   key={item.id}
-                  whileHover={{ y: -6 }}
                   transition={{ duration: 0.3 }}
                   onClick={() => {
                     setActiveId(item.id);
                     setSelectedModalPillar(item);
                   }}
-                  className={`group relative overflow-hidden rounded-3xl border transition-all duration-300 cursor-pointer flex flex-col justify-between p-6 ${
+                  className={`group relative overflow-hidden rounded-[24px] border transition-all duration-300 cursor-pointer flex flex-col justify-between p-6 bg-white border-t-[3px] border-t-[#FF5500] shadow-[0_10px_30px_rgba(255,85,0,0.10)] ${
                     isCurrentActive
-                      ? "border-[#ff4d00] bg-white shadow-[0_10px_30px_rgba(255,77,0,0.15)]"
-                      : "border-black/10 bg-white/70 hover:border-black/30 hover:bg-white shadow-sm hover:shadow-md"
+                      ? "border-[#ff4d00]"
+                      : "border-[rgba(255,85,0,0.14)] hover:-translate-y-[4px] hover:border-[#ff4d00] hover:shadow-[0_18px_44px_rgba(255,85,0,0.20)]"
                   }`}
                 >
                   {/* Subtle Accent Glow */}
